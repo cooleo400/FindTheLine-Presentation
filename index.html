@@ -15,6 +15,24 @@
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/blood.css">
 	</head>
+	<style>
+
+	.reveal section ul.no-style { list-style-type: none; }
+	.reveal section img { border: 0; -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,.2); }
+	.reveal section img.no-style { -webkit-box-shadow: none; background: transparent; }
+	.reveal section .col2 { width: 45%; float: left; margin-right: 4%; }
+	.reveal section .col3 { width: 30%; margin-right: 2.5%;}
+	.reveal section .col2:last-child, 
+	.reveal section .col3:last-child { margin-right: 0;}
+	
+	.reveal section img.bot {
+		width: 20%;
+		position: relative;
+		-webkit-animation: animate-bot 3s ease-in-out infinite;	
+	}
+	@-webkit-keyframes animate-bot{from{top:0px}50%{top:-10px}to{top:0px}};
+	
+	</style>
 
 	<body>
 
@@ -43,22 +61,33 @@
 					<p>Limitations/Specifications</p>
 				</section>
 
-				<section>
+				<section data-background-image="img/ftl_bg.png">
 					<h2>Find The Line NYC</h2>
-					<p>What is it?</p>
-					<p>Why'd you make it?</p>
+					<p>The trial and error....and error...and error project.</p>
+					<aside class="notes">
+						<p>What is it?</p>
+						<p>Why'd you make it?</p>
+						- Subway Compass, finds closest train
+				        - RGA Basketball > Financial District
+				        - Never made an iOS app
+				    </aside>
 				</section>
 
 				<section>
 					<h2>Tech Stack</h2>
-					<p>Phonegap</p>
-						<p>-notes - phonegap plugins</p>
-						<p>jquery</p>
-					<p>github</p>
-					<p>trello</p>
-					<p>Parse - Heroku ):<p>
-					<p>Google Maps</p>
-					<p>MySQL<p>
+					<ul>
+						<li>Phonegap
+							<ul>
+								<li>jQuery</li>
+								<li>Hammer.js</li>
+							</ul>
+						</li>
+						<li>Parse / Heroku</li>
+						<li>MySQL</li>
+						<li>Google Maps API</li>
+						<li>Github</li>
+						<li>Trello</li>
+					</ul>
 				</section>
 
 				<section>
@@ -67,40 +96,46 @@
 				</section>
 
 				<section>
-					Design 
-					- 2.5 iterations
-					- insert assets
+					<h2>Design </h2>
+					<p>- 3 iterations</p>
+					<img class="col3" src="img/designv1.jpg" alt="" ></img>
+					<img class="col3" src="img/designv2.jpg" alt="" ></img>
+					<img class="col3" src="img/designv3.jpg" alt="" ></img>
+				</section>
+				<section>
+					<section>
+						<h2>The Data</h2>
+						<p>This part sucked...</p>
+					</section>
+					<section>
+						<p>General Transit Feed Specification</p>
+						<img src="img/gtfs.png" alt="" style="width: 50%;"></img>
+					</section>
+					<section>
+						<p> MYSQL > NoSQL > Parse<p>
+					</section>
 				</section>
 
 				<section>
-					<h2>Preparing the Data</h2>
-					<p> MYSQL > NoSQL > Parse<p>
-				</section>
-
 					<section>
-						<h2> Writing the code</h2>
+						<h2>Writing the code</h2>
 						<p> started w angular > new project, removed, to get plugins working</p>
-						<p> incorp plugins</p>
-						<section>
-						<h2>Trello</h2>
-						<p>Pros and Cons</p>
-							- Not great for bug tracking
-							- free and quick setup
-							- free app w real time web
 					</section>
 
 					<section>
+						<img src="img/graphic_build_bot.png" class="bot no-style" />
 						<h2> Phonegap </h2>
-						<p> Pros + Cons </p>
-							- multiple developers, no learning time
-							- multiple platforms
-							- native plugins suck
-							- Documentation not great
-							- embed phonegap view into slide
-						<p> Plugins used: </p>
-							- compass
-							- navigator
-						<p>more?</p>
+
+						<h4> Pros + Cons </h4>
+						<ul class="no-style">
+							<li>+ multiple web developers, smaller learning curve</li>
+							<li>+ multiple platforms</li>
+							<li>- native plugins can suck</li>
+							<li>- Documentation not great</li>
+						</ul>
+						
+						<h4>Plugins</h4> 
+						<p>Device, Device Motion, Device Orientation, Notification, Geolocation, Network Information, Splashscreen, StatusBar</p>
 					</section>
 
 					<section>
@@ -108,13 +143,27 @@
 					</section>
 
 					<section>
-						<h2> iOS </h2>
-						<p> Pros and Cons </p>
-							- getting approved
-								- selling / pricing
-							- watching out for iOS branding
-								- insert link about 12 things to not get denied.
+						<h2>The App</h2>
+						<img class="app-store no-style" src="img/app-store.png" />
+						<ul>
+							<li>iOS Approval process</li>
+								<ul>
+									<li>"Do not violate the Human Interface Guidelines"</li>
+									<li>"Apps or metadata that mention the name of any other mobile platform will be rejected." - Apple Bros/Brodettes</li>
+								</ul>
+							<li>Selling / Pricing</li>
+							<li>Android? Soon come.</li>
+						</ul>
 					</section>
+
+					<section>
+						<h2>Trello</h2>
+						<p>Pros and Cons</p>
+							- Not great for bug tracking
+							- free and quick setup
+							- free app w real time web
+					</section>
+
 				</section>
 
 				<section>
@@ -124,7 +173,11 @@
 					- Parse / itunesconnect / sensor tower
 				</section>
 
-				
+				<section>
+					<h2>Links</h2>
+					<p>GTFS: <a href="https://developers.google.com/transit/gtfs/">https://developers.google.com/transit/gtfs/</a></p>
+					<p><a href="http://flippa.com/blog/rejected-ios-app/">http://flippa.com/blog/rejected-ios-app/</a></p>
+				</section>
 
 				<section>
 					<h2> Questions? </h2>
