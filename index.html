@@ -60,9 +60,39 @@
 
 				<section>
 					<h2>console.log</h2>
-					<p>What is it?</p>
+
+					<p>what is it?</p>
+					<p>A tool for developers to view the browser’s console.</p>
+
+					<aside class="notes">
+						<p>3Kb js file to include on your page, before any script that has console.log</p>
+						<p>A tool for developers to view the browser’s console on a browser that does not support console (*cough* IE) or a mobile device.</p>
+						<p>Shows a viewable console in the browser</p>
+
+						<p>How it works</p>
+						<p>Uses device detection (user agent sniffing) and if console is undefined.</p>
+						<p>Overwrites the console object and log function.</p>
+						<p>Adds each log entry as an &gt;li&lt; element into the DOM</p>
+				    </aside>
+
+
 					<p>Why'd you make it?</p>
+					<p>See console messages on mobile devices</p>
+					<p>As well as to see in browsers that do not support console</p>
+
+
 					<p>Limitations/Specifications</p>
+					<p>Outputing nested object</p>
+					<p>No libraries</p>
+
+					<aside class="notes">
+						<p>Older browsers dont support JSON.stringify, needed to hardcode it</p>
+						<p>-- Recursive to print nested objects</p>
+						<p>Not using any libraries to reduce size and not needed</p>
+						<p>-- Dom interaction (adding elements, styling) old school</p>
+						<p>-- Old fashion event handling element.onclick = function(e){}</p?
+					</aside>
+
 				</section>
 
 				<section data-background-image="img/ftl_bg.png">
