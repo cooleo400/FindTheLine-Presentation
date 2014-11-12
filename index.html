@@ -24,6 +24,8 @@
 	.reveal section .col3 { width: 30%; margin-right: 2.5%;}
 	.reveal section .col2:last-child, 
 	.reveal section .col3:last-child { margin-right: 0;}
+	.reveal .fl {float:left;}
+	.reveal .fr {float: right;}
 	
 	.reveal section img.bot {
 		width: 20%;
@@ -54,40 +56,50 @@
 				</section>
 
 				<section>
-					<h2>console.log</h2>
 
-					<p>what is it?</p>
-					<!-- <p>A tool for developers to view the browser’s console.</p> -->
+					<section>
+						<h2>console.log</h2>
+						<p><a href="http://console.mikewgd.com">http://console.mikewgd.com</a></p>
+						
+						<ul class="no-style">
+							<li>What is it?</li>
+							<li>Why did you make it?</li>
+							<li>How does it work?</li>
+						</ul>
+					</section>
 
-					<aside class="notes">
-						<p>3Kb js file to include on your page, before any script that has console.log</p>
-						<p>A tool for developers to view the browser’s console on a browser that does not support console (*cough* IE) or a mobile device.</p>
-						<p>Shows a viewable console in the browser</p>
+					<section>
+						<img class="no-style c-img" src="img/console.png" alt="" />
+					</section>
 
-						<p>How it works</p>
-						<p>Uses device detection (user agent sniffing) and if console is undefined.</p>
-						<p>Overwrites the console object and log function.</p>
-						<p>Adds each log entry as an &gt;li&lt; element into the DOM</p>
-				    </aside>
-
-
-					<p>Why'd you make it?</p>
-					<p>See console messages on mobile devices</p>
-					<p>As well as to see in browsers that do not support console</p>
-
-
-					<p>Limitations/Specifications</p>
-					<p>Outputing nested object</p>
-					<p>No libraries</p>
-
-					<aside class="notes">
-						<p>Older browsers dont support JSON.stringify, needed to hardcode it</p>
-						<p>-- Recursive to print nested objects</p>
-						<p>Not using any libraries to reduce size and not needed</p>
-						<p>-- Dom interaction (adding elements, styling) old school</p>
-						<p>-- Old fashion event handling element.onclick = function(e){}</p?
-					</aside>
-
+					<section>
+						<h4>Features</h4>
+						<ul>
+							<li>Query Params</li>
+							<li>Toggle</li>
+							<li>Change height</li>
+							<li>Lightweight</li>
+							<li>Easy Implementation</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h4>Future Features</h4>
+						<ul>
+							<li>Execute code</li>
+							<li>Clear console button</li>
+							<li>Styling</li>
+						</ul>
+					</section>
+					
+					<section>
+						<h4>Limitations</h4>
+						<ul>
+							<li>No Javascript libraries</li>
+							<li>Complex Nested objects</li>
+							<li>HTML Elements</li>
+						</ul>
+					</section>
 				</section>
 
 				<section data-background-image="img/ftl_bg.png">
@@ -218,23 +230,10 @@
 
 				<section>
 					<h2>Links</h2>
-					<p>GTFS: <a href="https://developers.google.com/transit/gtfs/">https://developers.google.com/transit/gtfs/</a></p>
-					<p><a href="http://flippa.com/blog/rejected-ios-app/">http://flippa.com/blog/rejected-ios-app/</a></p>
-				</section>
-
-				<section>
-					<h2>Limitations/Hardships</h2>
-					<p>Phonegap</p>
-					<p>iOS Approval (elaborate more on)</p>
-					<p>New lines / locations<p>
-
-					<aside class="notes">
-						<p>Phonegap</p>
-						<p>-- Using plugins</p>
-						<p>-- Learning, docs not great</p>
-						<p>New lines added in future</p>
-						<p>-- Need to update mysql</p>
-					</aside>
+					<p><a href="https://developers.google.com/transit/gtfs/">General Transit Feed Specification</a></p>
+					<p><a href="http://flippa.com/blog/rejected-ios-app/">12 Reasons Why Apps Get Rejected by the App Store</a></p>
+					<p><a href="http://console.mikewgd.com">Console.Log</a></p>
+					<p><a href="http://findthelineapp.com/">FindTheLine Website</a>
 				</section>
 
 				<section>
