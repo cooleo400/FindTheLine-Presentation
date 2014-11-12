@@ -32,7 +32,18 @@
 		-webkit-animation: animate-bot 3s ease-in-out infinite;	
 	}
 
-	.reveal iframe#embed { width: 385px; height: 683px; zoom: 1; }
+	/*.reveal iframe#embed { width: 385px; height: 683px; zoom: 1; }*/
+	.reveal iframe#embed { width: 320px; height: 568px; zoom: 1; }
+
+	.reveal .phone {
+		background: url(img/phone-holder.png);
+		width: 350px;
+		min-height: 735px;
+		padding: 100px 15px;
+		margin: 0 auto;
+		background-size: 375px 775px;
+		background-repeat: no-repeat;
+	}
 
 	@-webkit-keyframes animate-bot{from{top:0px}50%{top:-10px}to{top:0px}};
 	
@@ -44,19 +55,18 @@
 
 			<div class="slides">
 
-				<section>
+				<section data-background-image="img/levy.jpeg">
 					<h2>console.log</h2> 
 					<h2>+</h2>
 					<h2>Find The Line NYC</h2>
 					<p>By: Cole n Mike</p>
-					- video of levy being lost
-
 				</section>
 
 				<section>
 					<h2>console.log</h2>
 
-					<p>what is it?</p>
+					<p>What is it?</p>
+					<p>How does it work?</p>
 					<!-- <p>A tool for developers to view the browser’s console.</p> -->
 
 					<aside class="notes">
@@ -70,22 +80,18 @@
 						<p>Adds each log entry as an &gt;li&lt; element into the DOM</p>
 				    </aside>
 
-
 					<p>Why'd you make it?</p>
-					<p>See console messages on mobile devices</p>
-					<p>As well as to see in browsers that do not support console</p>
-
 
 					<p>Limitations/Specifications</p>
-					<p>Outputing nested object</p>
-					<p>No libraries</p>
 
 					<aside class="notes">
+						<p>Outputing nested object</p>
+						<p>No libraries</p>
 						<p>Older browsers dont support JSON.stringify, needed to hardcode it</p>
 						<p>-- Recursive to print nested objects</p>
 						<p>Not using any libraries to reduce size and not needed</p>
 						<p>-- Dom interaction (adding elements, styling) old school</p>
-						<p>-- Old fashion event handling element.onclick = function(e){}</p?
+						<p>-- Old fashion event handling element.onclick = function(e){}</p>
 					</aside>
 
 				</section>
@@ -147,17 +153,23 @@
 						<img src="img/gtfs.png" alt="" style="width: 50%;"></img>
 					</section>
 					<section>
-						<p> MYSQL > NoSQL > Parse<p>
-							<p>Updating data set will have to go through the process again</p>
-							<!-- TODO: make process list -->
+						<h2>MYSQL > Parse</h2>
+						<p>...in this case</p>
+						<p>Created useful dataset using MYSQL first, then ported to Parse.</p>
+						<ul>
+							<li>Download and insert data into local tables</li>
+							<li>Run queries to create end result table</li>
+							<li>Export table to csv</li>
+							<li>Import to parse</li>
+						</ul>
 					</section>
 				</section>
 				
 				<section>
 					<section>
 						<h2>Writing the code</h2>
-						<p> started w angular > new project, removed, to get plugins working</p>
-						<p> Used console log, very helpful</p>
+						<p>Started project with Angular...ended up removing, didn't seem to fit.</p>
+						<p>Used console log throughout</p>
 					</section>
 
 					<section>
@@ -203,8 +215,10 @@
 					</section>
 
 					<section>
-						<iframe src="http://findthelineapp.com/embed.php" id="embed" scrolling="no" frameborder="0" ></iframe>
-						<!-- <iframe src="http://findthelineapp.com/embed/" id="embed" width="320" height="568" ></iframe> -->
+						<div class="phone">
+							<iframe src="http://findthelineapp.com/embed.php" id="embed" scrolling="no" frameborder="0" width="320" height="568	" ></iframe>
+							<!-- <iframe src="http://findthelineapp.com/embed/" id="embed" width="320" height="568" ></iframe> -->
+						</div>
 					</section>
 
 				</section>
@@ -220,21 +234,6 @@
 					<h2>Links</h2>
 					<p>GTFS: <a href="https://developers.google.com/transit/gtfs/">https://developers.google.com/transit/gtfs/</a></p>
 					<p><a href="http://flippa.com/blog/rejected-ios-app/">http://flippa.com/blog/rejected-ios-app/</a></p>
-				</section>
-
-				<section>
-					<h2>Limitations/Hardships</h2>
-					<p>Phonegap</p>
-					<p>iOS Approval (elaborate more on)</p>
-					<p>New lines / locations<p>
-
-					<aside class="notes">
-						<p>Phonegap</p>
-						<p>-- Using plugins</p>
-						<p>-- Learning, docs not great</p>
-						<p>New lines added in future</p>
-						<p>-- Need to update mysql</p>
-					</aside>
 				</section>
 
 				<section>
